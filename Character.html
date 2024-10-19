@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character</title>
+</head>
+<body>
+    <script>
+ 
+    // Get the character input from the user
+    var char = prompt("Please enter a character (number or letter):");
+
+    // Check if the input is a single character
+    if (char.length !== 1) {
+        alert("Please enter only one character.");
+        return;
+    }
+
+    // Get the ASCII code of the character
+    const asciiCode = char.charCodeAt(0);
+
+    // Check the type of character
+    if (asciiCode >= 48 && asciiCode <= 57) { // Numbers (0-9)
+        alert("The input is a number.");
+    } else if (asciiCode >= 65 && asciiCode <= 90) { // Uppercase letters (A-Z)
+        alert("The input is an uppercase letter.");
+    } else if (asciiCode >= 97 && asciiCode <= 122) { // Lowercase letters (a-z)
+        alert("The input is a lowercase letter.");
+    } else {
+        alert("The input is neither a number nor a letter.");
+    }
+
+    </script>
+</body>
+</html>
